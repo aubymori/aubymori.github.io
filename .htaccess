@@ -1,0 +1,7 @@
+# hello
+# this is to sort the pages goodly
+
+Options +Indexes
+IndexOptions FancyIndexing
+
+DirectoryIndex home.html

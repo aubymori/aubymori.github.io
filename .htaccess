@@ -4,4 +4,4 @@
 Options +Indexes
 IndexOptions FancyIndexing
 
-DirectoryIndex home.html
+DirectoryIndex index.html

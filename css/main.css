@@ -3,6 +3,12 @@ body {
     background-color: #171717;
 }
 
+@media screen and (max-width: 480px) {
+    #links, #banner, #footer, #content {
+        width: 100%!important;
+    }
+}
+
 ::selection {
     color: white;
     background: #534588

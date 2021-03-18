@@ -49,10 +49,11 @@ body {
     display: inline-block;
     color: #999;
     text-decoration: none;
+    border-radius: 5px;
 }
 
 #links a:hover {
-    text-decoration: underline;
+    background-color: #4e4e4e;
 }
 
 #seperator {
@@ -72,6 +73,7 @@ body {
     height: 32px;
     margin-top: 5px;
     font-size: 12pt;
+    border-radius: 5px;
 }
 
 #footer-links a {
@@ -79,10 +81,11 @@ body {
     display: inline-block;
     color: #999;
     text-decoration: none;
+    border-radius: 5px;
 }
 
 #footer-links a:hover {
-    text-decoration: underline;
+    background-color: #4e4e4e;
 }
 
 #copyright {

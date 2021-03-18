@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #171717;
+}
+
+::selection {
+    color: white;
+    background: #534588
+}
+
+#banner {
+    height: 200px;
+}
+
+#banner a {
+    height: 200px;
+    display: inline-block;
+}
+
+#links, #banner, #footer, #content {
+    margin: 0 auto;
+    width: 800px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #050505;
+    background: #272727;
+    border-radius: 5px;
+    color: #999;
+}
+
+#content {
+    padding: 1px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#links {
+    border: 1px solid #222;
+    border-radius: 5px;
+    background: #272727;
+    height: 32px;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-size: 12pt;
+}
+
+#links a {
+    margin-top: 3px;
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}
+
+#seperator {
+    margin-top: 3px;
+    display: inline-block;
+    color: #999;
+    user-select: none;
+    margin-left: 5px;
+}
+
+#footer {
+    padding: 10px 10px;
+    margin-top: 5px;
+}
+
+#footer-links {
+    height: 32px;
+    margin-top: 5px;
+    font-size: 12pt;
+}
+
+#footer-links a {
+    margin-top: 3px;
+    display: inline-block;
+    color: #999;
+    text-decoration: none;
+}
+
+#footer-links a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    margin-top: 5px;
+    color: #999;
+    font-size: 9pt;
+}
+
+#selected {
+    font-weight: bold;
+    pointer-events: none;
+}

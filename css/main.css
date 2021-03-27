@@ -67,8 +67,6 @@ body {
 #footer {
     padding: 10px 10px;
     margin-top: 5px;
-    position: fixed;
-    bottom: 0;
 }
 
 #footer-links {

@@ -1,6 +1,6 @@
 @font-face {
   font-family: Segoe UI;
-  src: local("Segoe UI"), 3 url("/fnt/segoe-ui.ttf") format("truetype"),
+  src: local("Segoe UI"), url("/fnt/segoe-ui.ttf") format("truetype"),
     url("/fnt/segoe-ui.woff") format("woff"),
     url("/fnt/segoe-ui.woff2") format("woff2");
 }

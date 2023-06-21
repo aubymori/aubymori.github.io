@@ -1,82 +1,223 @@
+/* Fonts for non-Windows operating systems */
 @font-face {
-  font-family: Segoe UI;
-  src: local("Segoe UI"), url("/fnt/segoe-ui.ttf") format("truetype"),
-    url("/fnt/segoe-ui.woff") format("woff"),
-    url("/fnt/segoe-ui.woff2") format("woff2");
+    font-family: "Courier New";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Courier New"), url("/fnt/cour.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Courier New";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Courier New Bold"), url("/fnt/courbd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Courier New";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Courier New Bold Italic"), url("/fnt/courbi.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Courier New";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Courier New Italic"), url("/fnt/couri.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Verdana"), url("/fnt/verdana.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Verdana Bold"), url("/fnt/verdanabd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Verdana";
+    font-style: italic;
+    font-weight: 700;
+    src: local("Verdana Bold Italic"), url("/fnt/verdanaz.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Verdana";
+    font-style: italic;
+    font-weight: 400;
+    src: local("Verdana Italic"), url("/fnt/verdanai.ttf") format("truetype");
 }
 
 body {
-  font-family: Segoe UI;
-  background: url("/img/aurora-bg.jpg");
-  background-repeat: none;
-  background-position: center center;
-  background-attachment: fixed;
-  color: white;
-  font-weight: default;
+    background: #535353;
+    font-size: 14px;
+    color: #000;
+    overflow-y: scroll;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Courier New", courier, monospace;
 }
 
-.window-frame {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: max-content;
-  height: min-content;
-  margin: auto;
-  padding: 5px;
-  padding-top: 0;
-  background: rgba(100, 118, 138, 0.5);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom-color: #2CD3FE;
-  border-right-color: #2CD3FE;
-  border-radius: 7px;
-  box-shadow: 0 3px 12px black, 0 0 0 1px rgba(0, 0, 0, 0.5);
+.hid {
+    display: none !important;
 }
 
-.window-content {
-  background: white;
-  padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
-  width: 400px;
-  height: 400px;
+/* Japanese tends to look terrible bolded at small font sizes */
+.nobold {
+    font-weight: 400 !important;
 }
 
-.window-title {
-  padding: 1px 0 4px 0;
+#nav, #main {
+    width: 950px;
+    margin: 0 auto;
 }
 
-.caption-text {
-  font-size: 12px;
-  color: black;
-  text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white;
+#nav {
+    height: 20px;
+    line-height: 20px;
+    background: #5a5a5a;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.btn {
-    font-family: Segoe UI;
-    font-size: 12px;
-    padding: 2px 0 2px 2px;
-    min-width: 75px;
+.nav-item, .nav-separator {
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.btn {
-    background: linear-gradient(#f2f2f2 0%, #ebebeb 50%, #ddd 50%, #cfcfcf 100%);
-    border: 1px solid #fcfcfc;
-    box-shadow: 0 0 0 1px #707070;
-    border-radius: 3px;
+.nav-separator {
+    margin: 0 3px;
 }
 
-.btn:hover {
-    background: linear-gradient(#eaf6fd 0%, #d9f0fc 50%, #bee6fd 50%, #a7d9f5 100%);
-    border: 1px solid #FAFDFE;
-    box-shadow: 0 0 0 1px #3C7FB1;
+.nav-item:hover, .nav-item:focus {
+    text-decoration: underline;
 }
 
-.btn:active {
-    background: linear-gradient(#DEEDF6 0%, #C4E5F6 50%, #98D1EF 50%, #66AFD7 100%);
-    box-shadow: 0 0 0 1px #2C628B, inset 0 2px -2px rgba(0, 0, 0, .3);
-    border-color: rgba(0, 0, 0, .3);
-    border-bottom-color: #5da1c5;
+#main {
+    background: #c6c6c6;
+    padding: 7px 0 23px 0;
+}
+
+#content, .alert {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.alert {
+    background: #f00;
+    color: #fff;
+    font-weight: 700;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#content {
+    background: #eee;
+    padding-bottom: 17px;
+}
+
+.section-title {
+    padding: 20px 25px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-content {
+    margin: 17px 25px 25px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#section-nav {
+    font-size: 24px;
+    margin: 0 25px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.section-link {
+    display: flex;
+}
+
+.section-prefix {
+    margin-right: 10px;
+}
+
+.section-link:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.spoiler {
+    border: 1px dashed grey;
+    padding: 1px;
+    text-align: center;
+}
+
+.spoiler-content {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section > img,
+.section-content img {
+    width: 100%;
+    height: auto;
+}
+
+.section > img {
+    image-rendering: crisp-edges;
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        margin: 0;
+    }
+
+    #main {
+        width: 100%;
+        padding: 0;
+    }
+
+    #content,
+    #nav,
+    .alert {
+        margin: 0;
+        width: 100%;
+    }
+
+    #nav {
+        height: 28px;
+    }
+    
+    .nav-item,
+    .nav-separator {
+        line-height: 28px;
+        font-size: 15px;
+    }
+    
+    .section-title {
+        padding: 20px 5px;
+    }
+
+    .section-content {
+        margin: 17px 10px 25px;
+    }
+
+    #section-nav {
+        margin: 0 10px;
+    }
 }

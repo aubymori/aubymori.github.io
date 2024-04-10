@@ -1,0 +1,43 @@
+.file-info > hbox > b {
+    margin-inline-end: 4px;
+}
+
+.file-info > * {
+    margin-block-end: 1em;
+}
+
+.download-button {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none !important;
+    color: #fff !important;
+    background-color: #81bc2e;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 1.25em;
+}
+
+.download-button:hover {
+    background-color: #83c822;
+}
+
+.download-button:hover:active {
+    background-color: #6a9a26;
+}
+
+.download-label {
+    font-weight: 600;
+}
+
+.download-icon {
+    width: 44px;
+    height: 44px;
+    margin-inline-end: 8px;
+    background: no-repeat url("/res/download.svg");
+    background-size: 44px 44px;
+}
+
+.download-size {
+    font-size: .75em;
+    opacity: 65%;
+}

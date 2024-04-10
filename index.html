@@ -1,10 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>Under Maintenance</title>
+        <meta charset="UTF-8"/>
+        <title>aubymori's website</title>
+        <link rel="stylesheet" href="/css/global.css"/>
+        <link rel="stylesheet" href="/css/home.css"/>
+        <link rel="stylesheet" href="/css/files.css"/>
     </head>
     <body>
-        <center><h1>Under Maintenance</h1></center>
+        <vbox id="root" align="center">
+            <hbox id="header" pack="center" align="stretch">
+                <box id="nav">
+                    <a href="#!/" class="nav-item" selected="true">
+                        <span id="logo"></span>
+                    </a>
+                    <!-- <a href="#!/projects" class="nav-item">
+                        <span class="nav-label">Projects</span>
+                    </a> -->
+                    <a href="#!/files" class="nav-item">
+                        <span class="nav-label">Files</span>
+                    </a>
+                </box>
+            </hbox>
+            <deck id="content">
+                <vbox page="" page-title="" selected="true">
+                    <hbox class="header">
+                        <span class="header-name">Home</span>
+                    </hbox>
+                    <hbox pack="center">
+                        <img id="home-avatar"
+                             src="https://avatars.githubusercontent.com/u/44238627?v=4"
+                             alt="aubymori"/>
+                        <vbox id="home-info" pack="center">
+                            <span id="home-name">aubymori</span>
+                        </vbox>
+                    </hbox>
+                    <p>
+                        Welcome! My name is Aubrey, and this is my personal site for things like
+                        links to my projects and small files.
+                    </p>
+                    <b id="socials-header">Socials:</b>
+                    <hbox class="social">
+                        <span class="social-icon twitter"></span>
+                        <a href="//twitter.com/aubymori" target="_blank">@aubymori</a>
+                    </hbox>
+                    <hbox class="social">
+                        <span class="social-icon github"></span>
+                        <a href="//github.com/aubymori" target="_blank">@aubymori</a>
+                    </hbox>
+                    <hbox class="social">
+                        <span class="social-icon discord"></span>
+                        <span title="(ID: 912499900699254785)">@aubymori</span>
+                    </hbox>
+                </vbox>
+                <vbox page="projects" page-title="Projects">
+                    <hbox class="header">
+                        <span class="header-name">Projects</span>
+                    </hbox>
+                </vbox>
+                <vbox page="files" page-title="Files">
+                    <hbox class="header">
+                        <span class="header-name">Files</span>
+                    </hbox>
+                    <hbox class="subnav-container">
+                        <vbox class="subnav">
+                            <a class="subnav-item" href="#!/files/classic-uac" selected="true">
+                                <span class="subnav-label">Classic UAC</span>
+                            </a>
+                            <a class="subnav-item" href="#!/files/sib-patch">
+                                <span class="subnav-label">StartIsBack++ Patch</span>
+                            </a>
+                        </vbox>
+                        <deck id="files-content" class="subnav-content">
+                            <vbox subpage="classic-uac" selected="true">
+                                <vbox class="file-info">
+                                    <hbox class="file-name">
+                                        <b>Name:</b>
+                                        1607uac.zip
+                                    </hbox>
+                                    <vbox class="file-description">
+                                        <b>Description:</b>
+                                        Files necessary to restore the classic DirectUI User Account Control GUI
+                                        Windows 10 versions 1703 and up. x86-64 only.
+                                    </vbox>
+                                    <vbox class="file-preview">
+                                        <b>Preview:</b>
+                                        <img src="/res/classic-uac-preview.png" 
+                                             alt="Classic User Account Control GUI"
+                                             width="452"
+                                             height="237"/>
+                                    </vbox>
+                                </vbox>
+                                <hbox class="download-container">
+                                    <a class="download-button" href="/files/1607uac.zip">
+                                        <span class="download-icon"></span>
+                                        <vbox class="download-text">
+                                            <span class="download-label">Download</span>
+                                            <span class="download-size">402 KB</span>
+                                        </vbox>
+                                    </a>
+                                </hbox>
+                            </vbox>
+                            <vbox subpage="sib-patch">
+                                <vbox class="file-info">
+                                    <hbox class="file-name">
+                                        <b>Name:</b>
+                                        HelpPaneandSIBMods.7z
+                                    </hbox>
+                                    <vbox class="file-description">
+                                        <b>Description:</b>
+                                        Patched StartIsBack++ 2.9.19 DLL which adds the "Help and Support" right pane item
+                                        as an option, reduces padding in the programs list, and restores native scrollbars,
+                                        all with the goal of improving accuracy to Windows 7. x86-64 only.
+                                    </vbox>
+                                    <hbox class="file-preview">
+                                        <b>Preview:</b>
+                                        <i>None</i>
+                                    </hbox>
+                                </vbox>
+                                <hbox class="download-container">
+                                    <a class="download-button" href="/files/HelpPaneandSIBMods.7z">
+                                        <span class="download-icon"></span>
+                                        <vbox class="download-text">
+                                            <span class="download-label">Download</span>
+                                            <span class="download-size">2.56 MB</span>
+                                        </vbox>
+                                    </a>
+                                </hbox>
+                            </vbox>
+                        </deck>
+                    </hbox>
+                </vbox>
+            </deck>
+        </vbox>
+        <script src="/js/common.js"></script>
     </body>
 </html>

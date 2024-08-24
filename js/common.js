@@ -69,3 +69,23 @@ let gNavigation = {
 };
 
 gNavigation.init();
+
+function openImageViewer(element)
+{
+    let image = document.getElementById("image-viewer-image");
+    image.src = element.src;
+    image.alt = element.alt;
+    document.getElementById("image-viewer-link").href = element.src;
+    document.getElementById("image-viewer").classList.add("active");
+}
+
+document.addEventListener("click", (e) => {
+    if (e.target.nodeName == "IMG" && e.target.classList.contains("viewable"))
+    {
+        openImageViewer(e.target);
+    }
+});
+
+document.getElementById("image-viewer").addEventListener("click", () => {
+    document.getElementById("image-viewer").classList.remove("active");
+});

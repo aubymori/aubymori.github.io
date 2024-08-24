@@ -6,61 +6,85 @@
         <link rel="stylesheet" href="/css/global.css"/>
         <link rel="stylesheet" href="/css/home.css"/>
         <link rel="stylesheet" href="/css/files.css"/>
+        <link rel="stylesheet" href="/css/tools.css">
     </head>
     <body>
-        <vbox id="root" align="center">
-            <hbox id="header" pack="center" align="stretch">
-                <box id="nav">
-                    <a href="#!/" class="nav-item" selected="true">
-                        <span id="logo"></span>
+        <box id="image-viewer" align="center" pack="center">
+            <vbox align="start">
+                <img id="image-viewer-image"/>
+                <a id="image-viewer-link" target="_blank">view original file</a>
+            </vbox>
+        </box>
+        <vbox id="root" align="stretch">
+            <hbox id="header" align="stretch">
+                <box id="nav" align="center">
+                    <a href="#!/" id="logo" class="nav-item" selected="true">
+                        <span class="nav-label">aubymori</span>
                     </a>
                     <a href="#!/files" class="nav-item">
-                        <span class="nav-label">Files</span>
+                        <span class="nav-label">files</span>
+                    </a>
+                    <a href="#!/tools" class="nav-item">
+                        <span class="nav-label">tools</span>
                     </a>
                 </box>
             </hbox>
             <deck id="content">
                 <vbox page="" page-title="" selected="true">
-                    <hbox class="header">
-                        <span class="header-name">Home</span>
-                    </hbox>
-                    <hbox pack="center">
-                        <img id="home-avatar"
-                             src="https://avatars.githubusercontent.com/u/44238627?v=4"
-                             alt="aubymori"/>
-                        <vbox id="home-info" pack="center">
-                            <span id="home-name">aubymori</span>
+                    <hbox class="two-col-container">
+                        <vbox id="home-left-col" class="left-col card" align="start">
+                            <img src="https://avatars.githubusercontent.com/u/44238627?v=4"
+                                 alt="aubymori"
+                                 id="home-profile-pic"/>
+                            <hbox id="home-header" align="center">
+                                <span class="header">aubymori</span>
+                                <img src="/res/trans.png" alt="transgender flag"/>
+                                <img src="/res/lesb.png" alt="lesbian flag"/>
+                            </hbox>
+                            <p>
+                                trans autistic windows modder, created 30+ windhawk mods
+                            </p>
+                            <span class="header-small">socials</span>
+                            <a href="https://github.com/aubymori" class="social" target="_blank">
+                                <span class="social-icon github"></span>
+                                @aubymori
+                            </a>
+                            <a href="https://www.youtube.com/@aubymori" class="social" target="_blank">
+                                <span class="social-icon youtube"></span>
+                                @aubymori
+                            </a>
+                            <a href="https://twitter.com/aubymori" class="social" target="_blank">
+                                <span class="social-icon twitter"></span>
+                                @aubymori
+                            </a>
+                            <a href="https://winclassic.net/user/2712" class="social" target="_blank">
+                                <span class="social-icon winclassic"></span>
+                                aubymori
+                            </a>
+                            <div class="social">
+                                <span class="social-icon discord"></span>
+                                <span title="(id: 912499900699254785)">@aubymori</span>
+                            </div>
+                        </vbox>
+                        <vbox class="right-col card">
+                            <span class="header">home</span>
+                            <p>
+                                Hey there. My name is Aubrey. On this site, you'll find files for
+                                small Windows mods I've created, small tools like
+                                <a href="#!/tools/guid-to-bytes">a GUID to byte converter</a>, and more.
+                            </p>
+                            <p>
+                                I'm not sure what else to put here, so have a few pictures of my cat.
+                                <img src="/res/hashbrown-1.jpg" class="viewable" alt="My cat, hashbrown, sleeping."/>
+                                <img src="/res/hashbrown-2.jpg" class="viewable" alt="Hashbrown laying down."/>
+                            </p>
                         </vbox>
                     </hbox>
-                    <p>
-                        Welcome! My name is Aubrey, and this is my personal site for things like
-                        links to my projects and small files.
-                    </p>
-                    <b id="socials-header">Socials:</b>
-                    <hbox class="social">
-                        <span class="social-icon twitter"></span>
-                        <a href="//twitter.com/aubymori" target="_blank">@aubymori</a>
-                    </hbox>
-                    <hbox class="social">
-                        <span class="social-icon github"></span>
-                        <a href="//github.com/aubymori" target="_blank">@aubymori</a>
-                    </hbox>
-                    <hbox class="social">
-                        <span class="social-icon discord"></span>
-                        <span title="(ID: 912499900699254785)">@aubymori</span>
-                    </hbox>
                 </vbox>
-                <vbox page="projects" page-title="Projects">
-                    <hbox class="header">
-                        <span class="header-name">Projects</span>
-                    </hbox>
-                </vbox>
-                <vbox page="files" page-title="Files">
-                    <hbox class="header">
-                        <span class="header-name">Files</span>
-                    </hbox>
-                    <hbox class="subnav-container">
-                        <vbox class="subnav">
+                <vbox page="files" page-title="files">
+                    <hbox class="two-col-container">
+                        <vbox class="left-col card">
+                            <span class="header-small">files</span>
                             <a class="subnav-item" href="#!/files/classic-uac" selected="true">
                                 <span class="subnav-label">Classic UAC</span>
                             </a>
@@ -73,75 +97,79 @@
                             <a class="subnav-item" href="#!/files/custom-cmd-ver-text">
                                 <span class="subnav-label">Custom CMD Version Text Files</span>
                             </a>
+                            <a class="subnav-item" href="#!/files/win7-network-flyout">
+                                <span class="subnav-label">Windows 7 Network Flyout</span>
+                            </a>
                         </vbox>
-                        <deck id="files-content" class="subnav-content">
+                        <deck id="files-content" class="right-col card">
                             <vbox subpage="classic-uac" selected="true">
                                 <vbox class="file-info">
                                     <hbox class="file-name">
-                                        <b>Name:</b>
+                                        <b>name:</b>
                                         1607uac.zip
                                     </hbox>
                                     <vbox class="file-description">
-                                        <b>Description:</b>
+                                        <b>description:</b>
                                         Files necessary to restore the classic DirectUI User Account Control GUI
                                         Windows 10 versions 1703 and up. x86-64 only.
                                     </vbox>
                                     <vbox class="file-preview">
-                                        <b>Preview:</b>
+                                        <b>preview:</b>
                                         <img src="/res/classic-uac-preview.png" 
                                              alt="Classic User Account Control GUI"
                                              width="452"
-                                             height="237"/>
+                                             height="237"
+                                             class="viewable"/>
                                     </vbox>
                                 </vbox>
                                 <hbox class="download-container">
-                                    <a class="download-button" href="/files/1607uac.zip">
+                                    <a href="/files/1607uac.zip" class="download-link">
                                         <span class="download-icon"></span>
-                                        <vbox class="download-text">
-                                            <span class="download-label">Download</span>
-                                            <span class="download-size">402 KB</span>
-                                        </vbox>
+                                        download now
                                     </a>
+                                    <span class="download-size">(402 kb)</span>
                                 </hbox>
                             </vbox>
                             <vbox subpage="sib-patch">
                                 <vbox class="file-info">
                                     <hbox class="file-name">
-                                        <b>Name:</b>
+                                        <b>name:</b>
                                         HelpPaneandSIBMods.7z
                                     </hbox>
                                     <vbox class="file-description">
-                                        <b>Description:</b>
+                                        <b>description:</b>
                                         Patched StartIsBack++ 2.9.19 DLL which adds the "Help and Support" right pane item
                                         as an option, reduces padding in the programs list, and restores native scrollbars,
                                         all with the goal of improving accuracy to Windows 7. x86-64 only.
+
+                                        You should probably use the StartIsBack++ Tweaker Windhawk mod instead, but
+                                        I will keep this up for historical purposes.
                                     </vbox>
                                     <hbox class="file-preview">
-                                        <b>Preview:</b>
+                                        <b>preview:</b>
                                         <img src="/res/sib-patch-preview.png" 
                                              alt="Start menu with the SIB++ patch"
-                                             width="411"
-                                             height="852"/>
+                                             width="206"
+                                             height="426"
+                                             class="viewable"/>
                                     </hbox>
                                 </vbox>
                                 <hbox class="download-container">
-                                    <a class="download-button" href="/files/HelpPaneandSIBMods.7z">
+                                    <a href="/files/HelpPaneandSIBMods.7z" class="download-link">
                                         <span class="download-icon"></span>
-                                        <vbox class="download-text">
-                                            <span class="download-label">Download</span>
-                                            <span class="download-size">2.56 MB</span>
-                                        </vbox>
+                                        download now
                                     </a>
+                                    <span class="download-size">(2.56 mb)</span>
                                 </hbox>
                             </vbox>
                             <vbox subpage="old-utilman">
                                 <vbox class="file-info">
                                     <hbox class="file-name">
-                                        <b>Name:</b>
+                                        <b>name:</b>
                                         old-utilman.zip
                                     </hbox>
                                     <vbox class="file-description">
-                                        <b>Description:</b>
+                                        <b>description:</b>
                                         Files necessary to restore the Windows 7 Ease of Access dialog on the
                                         logon UI.
                                         <a target="_blank" href="https://winclassic.net/thread/2345/windows-7-ease-access-dialog">
@@ -149,57 +177,110 @@
                                         </a>
                                     </vbox>
                                     <vbox class="file-preview">
-                                        <b>Preview:</b>
+                                        <b>preview:</b>
                                         <img src="/res/old-utilman-preview.png" 
                                              alt="Old Ease of Access"
-                                             width="889"
-                                             height="500"/>
+                                             width="445"
+                                             height="250"
+                                             class="viewable"/>
                                     </vbox>
                                     <hbox class="download-container">
-                                        <a class="download-button" href="/files/old-utilman.zip">
+                                        <a href="/files/old-utilman.zip" class="download-link">
                                             <span class="download-icon"></span>
-                                            <vbox class="download-text">
-                                                <span class="download-label">Download</span>
-                                                <span class="download-size">943 KB</span>
-                                            </vbox>
+                                            download now
                                         </a>
+                                        <span class="download-size">(943 kb)</span>
                                     </hbox>
                                 </vbox>
                             </vbox>
                             <vbox subpage="custom-cmd-ver-text">
                                 <vbox class="file-info">
                                     <hbox class="file-name">
-                                        <b>Name:</b>
+                                        <b>name:</b>
                                         CustomCmdVerText.zip
                                     </hbox>
                                     <vbox class="file-description">
-                                        <b>Description:</b>
+                                        <b>description:</b>
                                         Files necessary to change the CMD version text without breaking batch
                                         scripts. Instructions included.
                                     </vbox>
                                     <vbox class="file-preview">
-                                        <b>Preview:</b>
+                                        <b>preview:</b>
                                         <img src="/res/custom-cmd-ver-text-preview.png" 
                                              alt="CMD with custom version text"
                                              width="404"
-                                             height="181"/>
+                                             height="181"
+                                             class="viewable"/>
                                     </vbox>
                                     <hbox class="download-container">
-                                        <a class="download-button" href="/files/CustomCmdVerText.zip">
+                                        <a href="/files/CustomCmdVerText.zip" class="download-link">
                                             <span class="download-icon"></span>
-                                            <vbox class="download-text">
-                                                <span class="download-label">Download</span>
-                                                <span class="download-size">279 KB</span>
-                                            </vbox>
+                                            download now
                                         </a>
+                                        <span class="download-size">(279 kb)</span>
+                                    </hbox>
+                                </vbox>
+                            </vbox>
+                            <vbox subpage="win7-network-flyout">
+                                <vbox class="file-info">
+                                    <hbox class="file-name">
+                                        <b>name:</b>
+                                        pnidui.zip
+                                    </hbox>
+                                    <vbox class="file-description">
+                                        <b>description:</b>
+                                        Files necessary to restore the Windows 7 Network Flyout
+                                        Windows 10. Only en-US included, installer also included.
+                                    </vbox>
+                                    <vbox class="file-preview">
+                                        <b>preview:</b>
+                                        <img src="/res/win7-network-flyout-preview.png" 
+                                             alt="Windows 7 Network Flyout on Windows 10"
+                                             width="313"
+                                             height="186"
+                                             class="viewable"/>
+                                    </vbox>
+                                    <hbox class="download-container">
+                                        <a href="/files/pnidui.zip" class="download-link">
+                                            <span class="download-icon"></span>
+                                            download now
+                                        </a>
+                                        <span class="download-size">(3.94 mb)</span>
                                     </hbox>
                                 </vbox>
                             </vbox>
                         </deck>
                     </hbox>
                 </vbox>
+                <vbox page="tools" page-title="tools">
+                    <hbox class="two-col-container">
+                        <vbox class="left-col card">
+                            <span class="header-small">tools</span>
+                            <a href="#!/tools/guid-to-bytes">GUID to bytes</a>
+                        </vbox>
+                        <vbox class="right-col card">
+                            <vbox subpage="guid-to-bytes" selected="true" align="stretch">
+                                <span class="header">GUID to bytes</span>
+                                <p>
+                                    This utility converts a GUID string to its raw
+                                    little endian representation.
+                                </p>
+                                <hbox align="center">
+                                    <span>guid:</span>
+                                    <input type="text" id="guid"/>
+                                </hbox>
+                                <hbox align="center">
+                                    <span>output:</span>
+                                    <input type="text" readonly="true" id="guid-out"/>
+                                </hbox>
+                            </vbox>
+                        </vbox>
+                    </hbox>
+                </vbox>
             </deck>
+            <span id="copyright">&copy; aubymori 2024</span>
         </vbox>
         <script src="/js/common.js"></script>
+        <script src="/js/tools.js"></script>
     </body>
 </html>

@@ -320,23 +320,43 @@
                         <vbox class="left-col card">
                             <span class="header-small">tools</span>
                             <a href="#!/tools/guid-to-bytes">GUID to bytes</a>
+                            <a href="#!/tools/define-guid-gen">DEFINE_GUID generator</a>
                         </vbox>
                         <vbox class="right-col card">
-                            <vbox subpage="guid-to-bytes" selected="true" align="stretch">
-                                <span class="header">GUID to bytes</span>
-                                <p>
-                                    This utility converts a GUID string to its raw
-                                    little endian representation.
-                                </p>
-                                <hbox align="center">
-                                    <span>guid:</span>
-                                    <input type="text" id="guid"/>
-                                </hbox>
-                                <hbox align="center">
+                            <deck id="tools-content">
+                                <vbox subpage="guid-to-bytes" selected="true" align="stretch">
+                                    <span class="header">GUID to bytes</span>
+                                    <p>
+                                        This utility converts a GUID string to its raw
+                                        little endian representation.
+                                    </p>
+                                    <hbox align="center">
+                                        <span>guid:</span>
+                                        <input type="text" id="guid-to-bytes-guid"/>
+                                    </hbox>
+                                    <hbox align="center">
+                                        <span>output:</span>
+                                        <input type="text" readonly="true" id="guid-out"/>
+                                    </hbox>
+                                </vbox>
+                                <vbox subpage="define-guid-gen" align="stretch">
+                                    <span class="header">DEFINE_GUID generator</span>
+                                    <p>
+                                        This utility generates a DEFINE_GUID statement
+                                        for a specific GUID.
+                                    </p>
+                                    <hbox align="center">
+                                        <span>name:</span>
+                                        <input type="text" id="define-guid-name"/>
+                                    </hbox>
+                                    <hbox align="center">
+                                        <span>guid:</span>
+                                        <input type="text" id="define-guid-guid"/>
+                                    </hbox>
                                     <span>output:</span>
-                                    <input type="text" readonly="true" id="guid-out"/>
-                                </hbox>
-                            </vbox>
+                                    <pre id="define-guid-out"></pre>
+                                </vbox>
+                            </deck>
                         </vbox>
                     </hbox>
                 </vbox>

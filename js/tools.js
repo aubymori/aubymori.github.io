@@ -1,5 +1,5 @@
 const GUID_REGEX = /^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$/;
-const GUID_INPUT = document.getElementById("guid");
+const GUID_INPUT = document.getElementById("guid-to-bytes-guid");
 
 function guidToBytes(guid)
 {
@@ -46,3 +46,61 @@ GUID_INPUT.addEventListener("input", () => {
         out.value = "Invalid GUID";
     }
 });
+
+const DEFINE_GUID_NAME = document.getElementById("define-guid-name");
+const DEFINE_GUID_GUID = document.getElementById("define-guid-guid");
+
+function defineGuid(name, guid)
+{
+    let text = guid.replace(/(^{|}$)/g, "");
+    let output = `DEFINE_GUID(${name}, `;
+
+    // First part
+    output += `0x${text.substr(0, 8)}, `;
+
+    // Second part
+    output += `0x${text.substr(9, 4)}, `;
+
+    // Third part
+    output += `0x${text.substr(14, 4)}, `;
+
+    // Fourth part
+    output += `0x${text.substr(19, 2)},0x${text.substr(21, 2)}, `;
+
+    // Fifth part
+    output += `0x${text.substr(24, 2)},`;
+    output += `0x${text.substr(26, 2)},`;
+    output += `0x${text.substr(28, 2)},`;
+    output += `0x${text.substr(30, 2)},`;
+    output += `0x${text.substr(32, 2)},`;
+    output += `0x${text.substr(34, 2)}`;
+    
+
+    output += ");";
+    return output;
+}
+
+function updateDefineGuid()
+{
+    let name = DEFINE_GUID_NAME.value;
+    let guid = DEFINE_GUID_GUID.value;
+    let out = document.getElementById("define-guid-out");
+
+    if (name == "" || guid == "")
+    {
+        out.textContent = "";
+        return;
+    }
+
+    if (GUID_REGEX.test(guid))
+    {
+        out.textContent = defineGuid(name, guid);
+    }
+    else
+    {
+        out.textContent = "Invalid GUID";
+    }
+}
+
+DEFINE_GUID_NAME.addEventListener("input", updateDefineGuid);
+DEFINE_GUID_GUID.addEventListener("input", updateDefineGuid);

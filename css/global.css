@@ -75,6 +75,15 @@ vbox img {
     display: block;
 }
 
+pre {
+    margin: 4px 0;
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 10pt !important;
+    min-height: 5em;
+    word-wrap: anywhere;
+    white-space: pre-line;
+}
+
 input[type="text"], pre {
     appearance: none;
     background-color: #8a6ead;

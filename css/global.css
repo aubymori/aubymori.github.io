@@ -107,7 +107,7 @@ hbox > span + input {
 }
 
 #image-viewer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     max-width: 100%;
@@ -137,6 +137,10 @@ hbox > span + input {
 #root {
     max-width: 1000px;
     margin-inline: auto;
+}
+
+:root.narrow #root {
+    margin-inline: 8px;
 }
 
 #header {
@@ -179,7 +183,12 @@ hbox > span + input {
 
 .header-small {
     font-weight: 700;
+    margin-top: 12px;
     margin-bottom: 4px;
+}
+
+.header-small.no-margin {
+    margin-top: 0;
 }
 
 .two-col-container {
@@ -198,4 +207,8 @@ hbox > span + input {
 
 .right-col img {
     margin-top: 6px;
+}
+
+.right-col p {
+    margin-bottom: 0;
 }

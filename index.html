@@ -6,7 +6,8 @@
         <link rel="stylesheet" href="/css/global.css"/>
         <link rel="stylesheet" href="/css/home.css"/>
         <link rel="stylesheet" href="/css/files.css"/>
-        <link rel="stylesheet" href="/css/tools.css">
+        <link rel="stylesheet" href="/css/desktops.css"/>
+        <link rel="stylesheet" href="/css/tools.css"/>
     </head>
     <body>
         <box id="image-viewer" align="center" pack="center">
@@ -24,8 +25,14 @@
                     <a href="#!/files" class="nav-item">
                         <span class="nav-label">files</span>
                     </a>
+                    <a href="#!/desktops" class="nav-item">
+                        <span class="nav-label">desktops</span>
+                    </a>
                     <a href="#!/tools" class="nav-item">
                         <span class="nav-label">tools</span>
+                    </a>
+                    <a href="#!/guides" class="nav-item">
+                        <span class="nav-label">guides</span>
                     </a>
                 </box>
             </hbox>
@@ -44,7 +51,7 @@
                             <p>
                                 trans autistic windows modder, created 30+ windhawk mods
                             </p>
-                            <span class="header-small">socials</span>
+                            <span class="header-small no-margin">socials</span>
                             <a href="https://github.com/aubymori" class="social" target="_blank">
                                 <span class="social-icon github"></span>
                                 @aubymori
@@ -53,9 +60,13 @@
                                 <span class="social-icon youtube"></span>
                                 @aubymori
                             </a>
-                            <a href="https://twitter.com/aubymori" class="social" target="_blank">
+                            <a href="https://twitter.com/audymori" class="social" target="_blank">
                                 <span class="social-icon twitter"></span>
-                                @aubymori
+                                @audymori
+                            </a>
+                            <a href="https://bsky.app/profile/audymori.bsky.social" class="social" target="_blank">
+                                <span class="social-icon bsky"></span>
+                                @audymori.bsky.social
                             </a>
                             <a href="https://winclassic.net/user/2712" class="social" target="_blank">
                                 <span class="social-icon winclassic"></span>
@@ -65,26 +76,144 @@
                                 <span class="social-icon discord"></span>
                                 <span title="(id: 912499900699254785)">@aubymori</span>
                             </div>
+                            <span class="header-small">buttons</span>
+                            <hbox class="button-row">
+                                <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
+                                    <img src="/res/buttons/fx.gif" alt="Get Firefox">
+                                </a>
+                                <a href="https://old.reddit.com/r/freemediaheckyeah/wiki" target="_blank">
+                                    <img src="/res/buttons/piracy.gif" alt="Piracy Now!">
+                                </a>
+                            </hbox>
+                            <hbox class="button-row">
+                                <a href="https://ponymare.ovh/" target="_blank">
+                                    <img src="/res/buttons/trixie.gif" alt="emilia's web">
+                                </a>
+                                <a href="https://skyeweeb.weebly.com/" target="_blank">
+                                    <img src="/res/buttons/skye.gif" alt="Skye">
+                                </a>
+                            </hbox>
+                            <hbox class="button-row last">
+                                <a href="https://vea.st/" target="_blank">
+                                    <img src="/res/buttons/chloe.png" alt="chloe vea.st">
+                                </a>
+                            </hbox>
+                            <span class="header-small">my button</span>
+                            <a href="/" target="_blank">
+                                <img src="/res/buttons/aubrey.gif" alt="aubymori Web site">
+                            </a>
                         </vbox>
                         <vbox class="right-col card">
                             <span class="header">home</span>
                             <p>
-                                Hey there. My name is Aubrey. On this site, you'll find files for
-                                small Windows mods I've created, small tools like
-                                <a href="#!/tools/guid-to-bytes">a GUID to byte converter</a>, and more.
+                                This is my personal site used to host small files, contain small
+                                tools written in JS, and to describe myself.
                             </p>
                             <p>
-                                I'm not sure what else to put here, so have a few pictures of my cat.
-                                <img src="/res/hashbrown-1.jpg" class="viewable" alt="My cat, hashbrown, sleeping."/>
-                                <img src="/res/hashbrown-2.jpg" class="viewable" alt="Hashbrown laying down."/>
+                                I'm a 16 year old Latina trans girl who's interested in computer
+                                software, mainly Windows NT and the XUL toolkit (Firefox). I write
+                                code mostly in C++, but I've had experience in JavaScript, PHP, C#,
+                                and HTML/CSS.
                             </p>
+                            <span class="header-small">Projects I've worked on in the past:</span>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/Rehike/Rehike" target="_blank">Rehike</a>:
+                                    A custom YouTube server that aims to faithfully restore the old frontend and layout. 
+                                </li>
+                                <li>
+                                    <a href="https://github.com/echelon-theme/echelon" target="_blank">Echelon</a>:
+                                    A theme for Firefox 115ESR that restores the appearance of older Firefox versions.
+                                </li>
+                                <li>
+                                    <a href="https://github.com/aubymori/Watch9Reconstruct" target="_blank">Watch9Reconstruct</a>:
+                                    A script which restored the old YouTube watch page layout from before 2019
+                                </li>
+                            </ul>
+                            <span class="header-small">Projects I work on currently:</span>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/ramensoftware/windhawk-mods/pulls?q=is%3Apr+author%3Aaubymori+" target="_blank">
+                                        A lot of mods for Windhawk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/aubymori/ClassicShutdown" target="_blank">ClassicShutdown</a>:
+                                    An applet which replicates the shutdown/logoff dialogs from Windows 2000 and XP.
+                                </li>
+                                <li>
+                                    <a href="https://github.com/aubymori/TaskManagerEx" target="_blank">TaskManagerEx</a>:
+                                    A fork of Windows XP's Task Manager which works better on modern Windows and has more
+                                    features.
+                                </li>
+                                <li>
+                                    <a href="https://github.com/aubymori/OpenWithEx" target="_blank">OpenWithEx</a>:
+                                    A recreation of the "Open with" dialog from Windows XP/Vista/7.
+                                </li>
+                            </ul>
+                            <span class="header-small">Music I like:</span>
+                            <ul>
+                                <li>Mitski</li>
+                                <li>Limp Bizkit</li>
+                                <li>Linkin Park</li>
+                                <li>System of a Down</li>
+                                <li>Evanescence</li>
+                                <li>Kittie</li>
+                                <li>Flyleaf</li>
+                                <li>DIR EN GREY</li>
+                            </ul>
+                            <span class="header-small">Media I've consumed:</span>
+                            <ul>
+                                <li>
+                                    <b>2020:</b>
+                                    <ul>
+                                        <li>Adventure Time</li>
+                                        <li>Steven Universe</li>
+                                        <li>Gravity Falls</li>
+                                        <li>The Amazing World of Gumball</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>2021:</b>
+                                    <ul>
+                                        <li>OMORI</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>2022:</b>
+                                    <ul>
+                                        <li>Homestuck</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>2023:</b>
+                                    <ul>
+                                        <li>Psycholonials</li>
+                                        <li>Adventure Time (rewatch)</li>
+                                        <li>Adventure Time: Distant Lands</li>
+                                        <li>Adventure Time: Fionna and Cake</li>
+                                        <li>Steven Universe (rewatch)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>2024:</b>
+                                    <ul>
+                                        <li>My Little Pony: Friendship is Magic</li>
+                                        <li>Half-Life</li>
+                                        <li>Half-Life 2 + Episode One and Two</li>
+                                        <li>Gravity Falls (rewatch)</li>
+                                        <li>Watamote (anime)</li>
+                                        <li>Elfen Lied (anime)</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </vbox>
                     </hbox>
                 </vbox>
                 <vbox page="files" page-title="files">
                     <hbox class="two-col-container">
                         <vbox class="left-col card">
-                            <span class="header-small">files</span>
+                            <span class="header-small no-margin">files</span>
                             <a class="subnav-item" href="#!/files/classic-uac" selected="true">
                                 <span class="subnav-label">Classic UAC</span>
                             </a>
@@ -315,10 +444,98 @@
                         </deck>
                     </hbox>
                 </vbox>
+                <vbox page="desktops" page-title="desktops">
+                    <vbox class="card">
+                        <span class="header">desktops</span>
+                        <p>
+                            This page contains screenshots of some of my Windows
+                            desktops from over the years, as well as some additional
+                            context and comments on them.
+                        </p>
+                        <span class="header">february 2023: windows 8 consumer preview</span>
+                        <img src="/res/desktops/2023-02.png" class="viewable"/>
+                        <p>
+                            This setup is a Windows 8.1 setup, themed to look like Windows 8 Consumer Preview
+                            (build 8250). It's mostly good, but the Firefox theme (Aerofox Continued) and the
+                            branding (modified Windows 7 branding) aren't something I'd ever use in 2024.
+                        </p>
+                        <span class="header">march 2023: windows 7 basic theme</span>
+                        <img src="/res/desktops/2023-03.png" class="viewable"/>
+                        <p>
+                            This setup is Windows 10 LTSC 2019 (1809) themed to look like Windows 7.
+                            Back then, this setup was pretty amazing. These days, it makes me want to vomit.
+                            First off, I was using the same Aerofox Continued theme, but I put Firefox in compatibility
+                            mode to get it to look right, so it has thin borders. Second off, the tray clock is too short;
+                            the one in Windows 7 had more horizontal margin. And it's not visible here, but StartIsBack++
+                            absolutely <b>sucks</b> for basic theme. The thumbnails and jump lists look terrible. As well,
+                            the Explorer has the following issues:
+                        </p>
+                        <ul>
+                            <li>Weird space to the right of search box</li>
+                            <li>Weirdly thin refresh button</li>
+                            <li>"Open Settings" on the command bar</li>
+                            <li>Windows 10 icons on the right of the command bar</li>
+                            <li>Terrible navigation pane tree sizing</li>
+                            <li>Awful looking back and forward buttons</li>
+                            <li>Pins under Quick access ("Favorites")</li>
+                        </ul>
+                        <p>
+                            Granted, this was before I took the time to make Aerexplorer or even write a Windhawk mod at all,
+                            so these issues were expected and there was no known way to fix them, but it still irks me just how
+                            awful this setup looks. This is probably the worst one that I'm including here.
+                        </p>
+                        <span class="header">march 2023: windows vista</span>
+                        <img src="/res/desktops/2023-03-2.png" class="viewable"/>
+                        <p>
+                            This one is Windows 7 themed to look like Windows Vista, not much to say here. The taskbar looks kind
+                            of off, with the items touching the bottom of it. My system actually doesn't run Windows 7 normally; it
+                            has no CSM. I had to use UefiSeven to get Windows 7 running.
+                        </p>
+                        <span class="header">september 2023: lightly modded windows 10</span>
+                        <img src="/res/desktops/2023-09.png" class="viewable"/>
+                        <p>
+                            This is a setup I do very often: a lightly modded Windows 10. I'm kind of a perfectionist, so most of the
+                            time, I'm not satisfied enough with how accurately you could get Windows 10 looking like older versions, so
+                            I just use a Windows 10 IoT LTSC 2021 (21H2) install lightly modded to my liking.
+                        </p>
+                        <span class="header">october 2023: windows xp classic theme</span>
+                        <img src="/res/desktops/2023-10.png" class="viewable"/>
+                        <p>
+                            This is probably my best setup of all time. I had to grind for it too. I did so much for this setup. The
+                            Firefox 2 theme you see was made completely by myself. I also made a Windhawk mod for the Windows 10 taskbar
+                            to have classic themed task items, a Windhawk mod for Explorer to have 32px icons, a Windhawk mod to fix the
+                            appearance of the list group headers, etc. etc. I'm proud of this setup and I want to go back to a Windows XP
+                            classic theme setup one day.
+                        </p>
+                        <span class="header">december 2023: windows 7 basic theme (again!)</span>
+                        <img src="/res/desktops/2023-12.png" class="viewable"/>
+                        <p>
+                            Nearly a year later than the first Windows 7 basic theme setup, this one is so much better. It's also based on
+                            Windows 10 IoT LTSC 2021 (21H2) instead of LTSC 2019 (1809). I have not much to say, except that Explorer's
+                            appearance is enhanced by my Windhawk mod, Aerexplorer, which was new at this time. I also made a Windhawk mod,
+                            Aero Tray, which is how I got the tray overflow looking like that.
+                        </p>
+                        <span class="header">april 2024: windows 8 developer preview</span>
+                        <img src="/res/desktops/2024-04.png" class="viewable"/>
+                        <p>
+                            This is Windows 10 IoT LTSC 2021 (21H2) themed to look like Windows 8's Developer Preview, which looks
+                            pretty similar to the Consumer Preview, which I themed 8.1 to look like a year before this. The glass
+                            in this setup was done with OpenGlass, but I eventually switched out of this setup due to performance
+                            issues with it.
+                        </p>
+                        <span class="header">november 2024: school laptop</span>
+                        <img src="/res/desktops/2024-11.png" class="viewable"/>
+                        <p>
+                            During this time, which also happens to be right now as of writing this, I was unable to use my main
+                            laptop, so instead, I created a separate partition on my school laptop and installed Windows 10 IoT
+                            LTSC 2021 on it. It's served me well, but I missed my main laptop.
+                        </p>
+                    </vbox>
+                </vbox>
                 <vbox page="tools" page-title="tools">
                     <hbox class="two-col-container">
                         <vbox class="left-col card">
-                            <span class="header-small">tools</span>
+                            <span class="header-small no-margin">tools</span>
                             <a href="#!/tools/guid-to-bytes">GUID to bytes</a>
                             <a href="#!/tools/define-guid-gen">DEFINE_GUID generator</a>
                         </vbox>
@@ -355,6 +572,49 @@
                                     </hbox>
                                     <span>output:</span>
                                     <pre id="define-guid-out"></pre>
+                                </vbox>
+                            </deck>
+                        </vbox>
+                    </hbox>
+                </vbox>
+                <vbox page="guides" page-title="guides">
+                    <hbox class="two-col-container">
+                        <vbox class="left-col card">
+                            <span class="header-small no-margin">guides</span>
+                            <a href="#!/guides/offline-registry-editing">
+                                Editing the registry of an offline Windows install
+                            </a>
+                        </vbox>
+                        <vbox class="right-col card">
+                            <deck id="guides-content">
+                                <vbox subpage="offline-registry-editing" selected="true" align="stretch">
+                                    <span class="header">Editing the registry of an offline Windows install</span>
+                                    <p>
+                                        This guide will explain how to edit the registry of an offline Windows install,
+                                        which means a Windows install that is either installed and not booted or that is
+                                        in a WIM/ESD archive, ready to be deployed.
+                                    </p>
+                                    <p>
+                                        The registry isn't stored in any weird hard to access place, it's stored in files.
+                                        You can view and edit these files in the Registry Editor by loading them with File
+                                        > Load Hive.
+                                    </p>
+                                    <p>
+                                        As for the locations of the files, let me go over them. The individual subkeys of
+                                        <code>HKEY_LOCAL_MACHINE</code> (<code>SOFTWARE</code>, <code>SYSTEM</code>, etc.)
+                                        are stored in the <code>%SystemRoot%\System32\config</code> folder. Each user's registry
+                                        data (basically, <code>HKEY_CURRENT_USER</code>) is stored in their profile directory as
+                                        <code>NTUSER.DAT</code>. I should also note the following:
+                                    </p>
+                                    <ul>
+                                        <li><code>HKEY_CLASSES_ROOT</code> is an alias to <code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes</code>.</li>
+                                        <li><code>HKEY_CURRENT_CONFIG</code> is an alias to <code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Hardware Profiles\Current</code>.</li>
+                                    </ul>
+                                    <p>
+                                        When you're done editing the registry of the offline install, make sure to select the
+                                        key the hive is loaded as, and do File > Unload Hive. The hive will remain loaded even
+                                        after the Registry Editor is closed, so you need to do this manually every time.
+                                    </p>
                                 </vbox>
                             </deck>
                         </vbox>

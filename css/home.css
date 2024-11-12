@@ -41,6 +41,10 @@
     background-image: url("/res/twitter.png");
 }
 
+.social-icon.bsky {
+    background-image: url("/res/bsky.png");
+}
+
 .social-icon.winclassic {
     background-image: url("/res/winclassic.png");
 }
@@ -61,6 +65,10 @@
     .social-icon.twitter {
         background-image: url("/res/twitter@2x.png");
     }
+
+    .social-icon.bsky {
+        background-image: url("/res/bsky@2x.png");
+    }
     
     .social-icon.winclassic {
         background-image: url("/res/winclassic@2x.png");
@@ -69,4 +77,12 @@
     .social-icon.discord {
         background-image: url("/res/discord@2x.png");
     }
+}
+
+.button-row:not(.last) {
+    margin-block-end: 4px;
+}
+
+.button-row > a {
+    margin-inline-end: 4px;
 }

@@ -1,3 +1,23 @@
+function onResize()
+{
+    let documentWidth = document.documentElement.clientWidth;
+    if (documentWidth <= 1016)
+    {
+        document.documentElement.classList.add("narrow");
+    }
+    else
+    {
+        document.documentElement.classList.remove("narrow");
+    }
+}
+
+// recalculate on resize
+window.addEventListener('resize', onResize, false);
+// recalculate on dom load
+document.addEventListener('DOMContentLoaded', onResize, false); 
+// recalculate on load (assets loaded as well)
+window.addEventListener('load', onResize);
+
 let gNavigation = {
     onHashChange: function Navigation_onHashChange()
     {

@@ -84,7 +84,7 @@ pre {
     white-space: pre-line;
 }
 
-input[type="text"], pre {
+input:is([type="text"], [type="number"]), pre, textarea {
     appearance: none;
     background-color: #8a6ead;
     border: 1px solid #421244;
@@ -93,11 +93,11 @@ input[type="text"], pre {
     padding: 2px;
 }
 
-input[type="text"]:focus {
+input:is([type="text"], [type="number"]):focus, textarea:focus {
     outline: 0;
 }
 
-input[type="text"]:read-only {
+input:is([type="text"], [type="number"]):read-only, textarea:read-only {
     opacity: .75;
 }
 

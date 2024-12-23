@@ -1,3 +1,5 @@
+/* == GUID to bytes == */
+
 const GUID_REGEX = /^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$/;
 const GUID_INPUT = document.getElementById("guid-to-bytes-guid");
 
@@ -46,6 +48,8 @@ GUID_INPUT.addEventListener("input", () => {
         out.value = "Invalid GUID";
     }
 });
+
+/* == DEFINE_GUID generator == */
 
 const DEFINE_GUID_NAME = document.getElementById("define-guid-name");
 const DEFINE_GUID_GUID = document.getElementById("define-guid-guid");
@@ -104,3 +108,48 @@ function updateDefineGuid()
 
 DEFINE_GUID_NAME.addEventListener("input", updateDefineGuid);
 DEFINE_GUID_GUID.addEventListener("input", updateDefineGuid);
+
+/* == SVG rasterizer == */
+const SVG_RASTERIZER_INPUT = document.getElementById("svg-rasterizer-input");
+const SVG_RASTERIZER_WIDTH = document.getElementById("svg-rasterizer-width");
+const SVG_RASTERIZER_HEIGHT = document.getElementById("svg-rasterizer-height");
+const SVG_RASTERIZER_OUTPUT = document.getElementById("svg-rasterizer-output");
+
+function svgToDataUri(svgString)
+{
+    return "data:image/svg+xml," + svgString.replace("<svg",(~svgString.indexOf("xmlns")?"<svg":"<svg xmlns=\"http://www.w3.org/2000/svg\""))
+        .replace(/"/g, "\"")
+        .replace(/%/g, "%25")
+        .replace(/#/g, "%23")       
+        .replace(/{/g, "%7B")
+        .replace(/}/g, "%7D")         
+        .replace(/</g, "%3C")
+        .replace(/>/g, "%3E")
+        .replace(/\s+/g," ");
+}
+
+function rasterizeSvg()
+{
+    let width = SVG_RASTERIZER_WIDTH.value;
+    let height = SVG_RASTERIZER_HEIGHT.value;
+    SVG_RASTERIZER_OUTPUT.width = width;
+    SVG_RASTERIZER_OUTPUT.height = height;
+    SVG_RASTERIZER_OUTPUT.style.width = width + "px";
+    SVG_RASTERIZER_OUTPUT.style.height = height + "px";
+
+    let ctx = SVG_RASTERIZER_OUTPUT.getContext("2d");
+    ctx.clearRect(0, 0, width, height);
+
+    let uri = svgToDataUri(SVG_RASTERIZER_INPUT.value);
+    console.log(uri);
+    let img = new Image();
+    img.onload = function() {
+        console.log("hi");
+        ctx.drawImage(img, 0, 0, width, height);
+    };
+    img.src = uri;
+}
+
+SVG_RASTERIZER_INPUT.addEventListener("input", rasterizeSvg);
+SVG_RASTERIZER_WIDTH.addEventListener("input", rasterizeSvg);
+SVG_RASTERIZER_HEIGHT.addEventListener("input", rasterizeSvg);

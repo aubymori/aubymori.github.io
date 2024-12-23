@@ -539,6 +539,7 @@
                             <span class="header-small no-margin">tools</span>
                             <a href="#!/tools/guid-to-bytes">GUID to bytes</a>
                             <a href="#!/tools/define-guid-gen">DEFINE_GUID generator</a>
+                            <a href="#!/tools/svg-rasterizer">SVG rasterizer</a>
                         </vbox>
                         <vbox class="right-col card">
                             <deck id="tools-content">
@@ -573,6 +574,25 @@
                                     </hbox>
                                     <span>output:</span>
                                     <pre id="define-guid-out"></pre>
+                                </vbox>
+                                <vbox subpage="svg-rasterizer" align="stretch">
+                                    <span class="header">SVG rasterizer</span>
+                                    <p>
+                                        This utility rasterizes SVGs completely
+                                        within the browser.
+                                    </p><p></p>
+                                    <span>svg:</span>
+                                    <textarea id="svg-rasterizer-input"></textarea>
+                                    <hbox align="center">
+                                        <span>width:</span>
+                                        <input type="number" value="1" min="1" id="svg-rasterizer-width"/>
+                                    </hbox>
+                                    <hbox align="center">
+                                        <span>height:</span>
+                                        <input type="number" value="1" min="1" id="svg-rasterizer-height"/>
+                                    </hbox>
+                                    <span>output:</span>
+                                    <canvas id="svg-rasterizer-output" width="1" height="1" style="width:1px;height:1px"></canvas>
                                 </vbox>
                             </deck>
                         </vbox>

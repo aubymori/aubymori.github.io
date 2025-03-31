@@ -1,6 +1,6 @@
 /* == GUID to bytes == */
 
-const GUID_REGEX = /^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$/;
+const GUID_REGEX = /^[{]?[0-9a-fA-F]{8}(-|_)([0-9a-fA-F]{4}(-|_)){3}[0-9a-fA-F]{12}[}]?$/;
 const GUID_INPUT = document.getElementById("guid-to-bytes-guid");
 
 function guidToBytes(guid)
@@ -28,7 +28,7 @@ function guidToBytes(guid)
     // Fifth part
     output += text.substr(24, 12);
 
-    return output;
+    return output.toUpperCase();
 }
 
 GUID_INPUT.addEventListener("input", () => {
@@ -60,24 +60,24 @@ function defineGuid(name, guid)
     let output = `DEFINE_GUID(${name}, `;
 
     // First part
-    output += `0x${text.substr(0, 8)}, `;
+    output += `0x${text.substr(0, 8).toUpperCase()}, `;
 
     // Second part
-    output += `0x${text.substr(9, 4)}, `;
+    output += `0x${text.substr(9, 4).toUpperCase()}, `;
 
     // Third part
-    output += `0x${text.substr(14, 4)}, `;
+    output += `0x${text.substr(14, 4).toUpperCase()}, `;
 
     // Fourth part
-    output += `0x${text.substr(19, 2)},0x${text.substr(21, 2)}, `;
+    output += `0x${text.substr(19, 2).toUpperCase()},0x${text.substr(21, 2).toUpperCase()}, `;
 
     // Fifth part
-    output += `0x${text.substr(24, 2)},`;
-    output += `0x${text.substr(26, 2)},`;
-    output += `0x${text.substr(28, 2)},`;
-    output += `0x${text.substr(30, 2)},`;
-    output += `0x${text.substr(32, 2)},`;
-    output += `0x${text.substr(34, 2)}`;
+    output += `0x${text.substr(24, 2).toUpperCase()},`;
+    output += `0x${text.substr(26, 2).toUpperCase()},`;
+    output += `0x${text.substr(28, 2).toUpperCase()},`;
+    output += `0x${text.substr(30, 2).toUpperCase()},`;
+    output += `0x${text.substr(32, 2).toUpperCase()},`;
+    output += `0x${text.substr(34, 2).toUpperCase()}`;
     
 
     output += ");";

@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Editing the registry of an offline Windows install - aubymori's website</title><link rel="stylesheet" href="/assets/css/core.css"><link rel="stylesheet" href="/assets/css/blog.css"></head><body><div id="root"><div id="header"><a href="/" id="logo">aubymori</a></div><div id="nav"><a href="/">Home</a><a href="/files/classic_uac">Files</a><a href="/desktops">Desktops</a><a href="/tools/guid_to_bytes">Tools</a><a href="/blog">Blog</a></div><div id="content"><div id="main-content" class="box"><a href="/blog">&lt;&lt; Back to blog entries</a><h1>Editing the registry of an offline Windows install</h1><span class="date">2024/11/12</span><p>
+    This guide will explain how to edit the registry of an offline Windows install,
+    which means a Windows install that is either installed and not booted or that is
+    in a WIM/ESD archive, ready to be deployed.
+</p><p>
+    The registry isn't stored in any weird hard to access place, it's stored in files.
+    You can view and edit these files in the Registry Editor by loading them with File
+    > Load Hive.
+</p><p>
+    As for the locations of the files, let me go over them. The individual subkeys of
+    <code>HKEY_LOCAL_MACHINE</code> (<code>SOFTWARE</code>, <code>SYSTEM</code>, etc.)
+    are stored in the <code>%SystemRoot%\System32\config</code> folder. Each user's registry
+    data (basically, <code>HKEY_CURRENT_USER</code>) is stored in their profile directory as
+    <code>NTUSER.DAT</code>. I should also note the following:
+</p><ul><li><code>HKEY_CLASSES_ROOT</code> is an alias to <code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes</code>.</li><li><code>HKEY_CURRENT_CONFIG</code> is an alias to <code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Hardware Profiles\Current</code>.</li></ul><p>
+    When you're done editing the registry of the offline install, make sure to select the
+    key the hive is loaded as, and do File > Unload Hive. The hive will remain loaded even
+    after the Registry Editor is closed, so you need to do this manually every time.
+</p></div></div><span id="copyright">Copyright &copy; 2026 aubymori</span></div></body></html>
